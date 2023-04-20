@@ -30,7 +30,7 @@ public class PokerHand {
             rank = 5;
         } else if (ThreeOfAKind.hasThreeOfAKind(hand)) {
             rank = 4;
-        } else if (hasTwoPair()) {
+        } else if (TwoPair.hasTwoPair(hand)) {
             rank = 3;
         } else if (hasOnePair()) {
             rank = 2;
