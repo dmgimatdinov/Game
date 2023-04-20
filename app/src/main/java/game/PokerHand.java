@@ -22,7 +22,7 @@ public class PokerHand {
             rank = 9;
         } else if (FourOfAKind.hasFourOfAKind(hand)) {
             rank = 8;
-        } else if (hasFullHouse()) {
+        } else if (FullHouse.hasFullHouse(hand)) {
             rank = 7;
         } else if (hasFlush()) {
             rank = 6;
