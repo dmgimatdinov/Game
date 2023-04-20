@@ -24,7 +24,7 @@ public class PokerHand {
             rank = 8;
         } else if (FullHouse.hasFullHouse(hand)) {
             rank = 7;
-        } else if (hasFlush()) {
+        } else if (Flush.hasFlush(hand)) {
             rank = 6;
         } else if (hasStraight()) {
             rank = 5;
