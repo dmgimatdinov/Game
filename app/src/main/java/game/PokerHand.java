@@ -1,7 +1,6 @@
 package game;
 
-import game.rank.RoyalFlush;
-import game.rank.StraightFlush;
+import game.rank.*;
 
 public class PokerHand {
     private String hand;
@@ -21,7 +20,7 @@ public class PokerHand {
             rank = 10;
         } else if (StraightFlush.hasStraightFlush(hand)) {
             rank = 9;
-        } else if (hasFourOfAKind()) {
+        } else if (FourOfAKind.hasFourOfAKind(hand)) {
             rank = 8;
         } else if (hasFullHouse()) {
             rank = 7;
