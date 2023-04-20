@@ -28,7 +28,7 @@ public class PokerHand {
             rank = 6;
         } else if (Straight.hasStraight(hand)) {
             rank = 5;
-        } else if (hasThreeOfAKind()) {
+        } else if (ThreeOfAKind.hasThreeOfAKind(hand)) {
             rank = 4;
         } else if (hasTwoPair()) {
             rank = 3;
