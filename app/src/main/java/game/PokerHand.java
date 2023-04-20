@@ -32,7 +32,7 @@ public class PokerHand {
             rank = 4;
         } else if (TwoPair.hasTwoPair(hand)) {
             rank = 3;
-        } else if (hasOnePair()) {
+        } else if (OnePair.hasOnePair(hand)) {
             rank = 2;
         } else {
             rank = 1;
