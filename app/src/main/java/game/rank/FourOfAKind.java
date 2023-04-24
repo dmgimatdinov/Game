@@ -33,6 +33,8 @@ public class FourOfAKind {
                 return 12;
             case 'J':
                 return 11;
+            case 'T':
+                return 10;
             default:
                 return Integer.parseInt(card.substring(0, 1));
         }

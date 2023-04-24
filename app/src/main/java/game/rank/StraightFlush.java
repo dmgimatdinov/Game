@@ -6,51 +6,52 @@ public class StraightFlush {
     public static boolean hasStraightFlush(String hand) {
         // Convert the string to an array of integers
         int[] cards = new int[5];
+        String[] strCards = hand.split(" ");
         for (int i = 0; i < 5; i++) {
-            switch (hand.charAt(i)) {
-                case 'A':
-                    cards[i] = 0;
-                    break;
+            switch (strCards[i].substring(0).charAt(0)) {
                 case '2':
-                    cards[i] = 1;
-                    break;
-                case '3':
                     cards[i] = 2;
                     break;
-                case '4':
+                case '3':
                     cards[i] = 3;
                     break;
-                case '5':
+                case '4':
                     cards[i] = 4;
                     break;
-                case '6':
+                case '5':
                     cards[i] = 5;
                     break;
-                case '7':
+                case '6':
                     cards[i] = 6;
                     break;
-                case '8':
+                case '7':
                     cards[i] = 7;
                     break;
-                case '9':
+                case '8':
                     cards[i] = 8;
                     break;
-                case 'T':
+                case '9':
                     cards[i] = 9;
                     break;
-                case 'J':
+                case 'T':
                     cards[i] = 10;
                     break;
-                case 'Q':
+                case 'J':
                     cards[i] = 11;
                     break;
-                case 'K':
+                case 'Q':
                     cards[i] = 12;
+                    break;
+                case 'K':
+                    cards[i] = 13;
+                    break;
+                case 'A':
+                    cards[i] = 14;
                     break;
             }
 
             // Add the suit to the card value
-            switch (hand.charAt(i + 5)) {
+            switch (strCards[i].substring(1).charAt(0)) {
                 case 'C':
                     cards[i] += 0;
                     break;
@@ -70,7 +71,7 @@ public class StraightFlush {
         return hasStraightFlush(cards);
     }
 
-    public boolean hasStraightFlush(int[] hand) {
+    public static boolean hasStraightFlush(int[] hand) {
         // Sort the hand in ascending order
         Arrays.sort(hand);
 

@@ -9,7 +9,8 @@ public class TwoPair {
             return false;
         }
         HashMap<String, Integer> map = new HashMap<>();
-        for (String card : cards) {
+        for (String cardTmp : cards) {
+            String card = String.valueOf(cardTmp.charAt(0));
             if (map.containsKey(card)) {
                 map.put(card, map.get(card) + 1);
             } else {

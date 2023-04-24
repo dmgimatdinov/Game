@@ -52,3 +52,22 @@ public class PokerHand {
         }
     }
 }
+
+/*public class PokerHand {
+    private List<Card> hand; // List of cards in the Hand
+
+    // Constructor for two-card poker hands
+    public PokerHand(Card c1, Card c2) {
+        this.hand = new ArrayList<Card>(Arrays.asList(c1, c2));
+    }
+
+    // Constructor for larger Texas Holdem hands
+    public PokerHand(Card c1, Card c2, Card c3, Card c4, Card c5) {
+        this.hand = new ArrayList<Card>(Arrays.asList(c1, c2, c3, c4, c5));
+    }
+
+    // Getter to return the hand's card array
+    public List<Card> getHand() {
+        return this.hand;
+    }
+}*/

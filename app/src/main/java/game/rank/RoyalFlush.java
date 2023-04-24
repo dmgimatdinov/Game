@@ -37,11 +37,11 @@ public class RoyalFlush {
                 } else if (!suit.equals(card.substring(1))) {
                     return false;
                 }
-            } else if (card.startsWith("10")) {
+            } else if (card.startsWith("T")) {
                 hasTen = true;
                 if (suit == null) {
-                    suit = card.substring(2);
-                } else if (!suit.equals(card.substring(2))) {
+                    suit = card.substring(1);
+                } else if (!suit.equals(card.substring(1))) {
                     return false;
                 }
             }

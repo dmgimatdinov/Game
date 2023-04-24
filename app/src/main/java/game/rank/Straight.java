@@ -34,14 +34,17 @@ public class Straight {
     // Helper function to get the value of a card
     private static int getValue(String card) {
         switch (card.charAt(0)) {
-            case 'A':
-                return 1;
+            case 'T':
+                return 10;
             case 'J':
                 return 11;
             case 'Q':
                 return 12;
             case 'K':
                 return 13;
+
+            case 'A':
+                return 14;
             default:
                 return Integer.parseInt(card.substring(0, card.length() - 1));
         }
