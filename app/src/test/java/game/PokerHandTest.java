@@ -2,6 +2,7 @@ package game;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PokerHandTest {
     @Test
@@ -54,4 +55,32 @@ class PokerHandTest {
         // Add more test cases for comparing hands
     }
 
+    @Test
+     void testHigherRank() {
+        PokerHand hand1 = new PokerHand("10C JS QS KS AS");
+        PokerHand hand2 = new PokerHand("9C JC QC KC AC");
+        PokerHandComparator comparator = new PokerHandComparator();
+        int result = comparator.compare(hand1, hand2);
+        assertTrue(result < 0);
+    }
+    
+    @Test
+    public void testLowerRank() {
+        PokerHand hand1 = new PokerHand("3D 4H 5C 6S 7H");
+        PokerHand hand2 = new PokerHand("4C 5D 6H 7C TD");
+        PokerHandComparator comparator = new PokerHandComparator();
+        int result = comparator.compare(hand1, hand2);
+        assertTrue(result > 0);
+    }
+    
+    @Test
+    public void testEqualRank() {
+        PokerHand hand1 = new PokerHand("10S JS QS KS AS");
+        PokerHand hand2 = new PokerHand("10C JC QC KC AC");
+        PokerHandComparator comparator = new PokerHandComparator();
+        int result = comparator.compare(hand1, hand2);
+        assertTrue(result == 0);
+    }
+
 }
+

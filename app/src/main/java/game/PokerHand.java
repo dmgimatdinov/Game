@@ -51,6 +51,12 @@ public class PokerHand {
             return 0;
         }
     }
+
+    public int getRank () {
+        return this.rank;
+    }
+
+    
 }
 
 /*public class PokerHand {
